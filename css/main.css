@@ -1,0 +1,185 @@
+@font-face {
+	font-family: 'Triforce';
+	src: url('media/Triforce.eot'); /* EOT file for IE */
+}
+@font-face {
+	font-family: 'Triforce';
+	src: url('../media/fonts/Triforce.ttf'); /* TTF file for CSS3 browsers */
+}
+
+html,
+body {
+	margin: 0 !important;
+	padding: 0;
+	min-height: 400px;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-tap-highlight-color: transparent;
+}
+text {
+	cursor: default;
+	user-select: none;
+}
+
+.background {
+	background-image: url('../img/zelda3-map.jpg');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	-webkit-filter: blur(5px);
+	-moz-filter: blur(5px);
+	-o-filter: blur(5px);
+	-ms-filter: blur(5px);
+	filter: blur(5px);
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: -2;
+}
+
+.simon-game {
+	display: block;
+	margin: auto;
+	margin-top: -10px;
+	width: 320px;
+	height: 320px;
+}
+@media (min-width: 500px) {
+	.simon-game {
+		width: 500px;
+		height: 500px;
+	}
+}
+.main-circle {
+	fill: #333;
+	filter: url(#outer-shadow);
+	transition: fill 0.2s ease;
+	stroke-width: 5px;
+	stroke: #222;
+}
+
+.controls-panel {
+	fill: #c5bfbf;
+	stroke: #a7a1a1;
+	stroke-width: 2px;
+}
+
+.app-logo {
+	fill: #333;
+	font-size: 28px;
+	font-family: 'Triforce', serif;
+}
+
+.app-logo-small {
+	fill: #333;
+	font-size: 6px;
+	font-family: 'Triforce', serif;
+}
+
+.display {
+	fill: #706b55;
+	stroke: #555;
+	stroke-width: 1;
+}
+.display-background {
+	fill: #282828;
+	display: none;
+}
+#status-text {
+	font-family: 'Press Start 2P', cursive;
+	fill: #bbb;
+	display: none;
+	font-size: 8px;
+}
+#on-display {
+	display: none;
+}
+
+.image,
+.border-outer,
+.border-inner,
+.button {
+	cursor: pointer;
+}
+#red-button {
+	fill: #af2826;
+}
+#blue-button {
+	fill: #4f68a8;
+}
+#yellow-button {
+	fill: #bc6228;
+}
+#green-button {
+	fill: #478e30;
+}
+
+#red-border-inner {
+	fill: #cd4644;
+}
+#blue-border-inner {
+	fill: #6d86c6;
+}
+#yellow-border-inner {
+	fill: #da8046;
+}
+#green-border-inner {
+	fill: #65ac4e;
+}
+#red-border-outer {
+	fill: #910a08;
+}
+#blue-border-outer {
+	fill: #314a8a;
+}
+#yellow-border-outer {
+	fill: #9e440a;
+}
+#green-border-outer {
+	fill: #297012;
+}
+
+.on-off {
+	font-size: 6px;
+	font-family: 'Roboto', sans-serif;
+	fill: #666;
+}
+.power-slide {
+	fill: #353535;
+	stroke: #555;
+}
+.power-slider {
+	fill: #444;
+	stroke: #353535;
+	stroke-width: 1px;
+}
+
+.strict-light {
+	fill: #444;
+	stroke: #555;
+	stroke-width: 0.5px;
+}
+.strict-light-blur {
+	fill: #fefe92;
+	opacity: 0;
+}
+.strict-button {
+	fill: #888;
+	stroke: #3a3a3a;
+	stroke-width: 0.5px;
+	cursor: default;
+}
+.strict-button:active {
+	fill: #777;
+	stroke: #999;
+	stroke-width: 0.5px;
+}
+
+.credits-text {
+	font-size: 8px;
+	fill: #1f1f1f;
+	font-family: 'Roboto', sans-serif;
+	cursor: pointer;
+	transition: fill 0.2s;
+}

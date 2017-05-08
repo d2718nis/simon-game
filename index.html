@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<!-- Mobile font size fix -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Simon game</title>
+		<!--
+		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+		-->
+		<link href="css/main.css" rel="stylesheet">
+		<!-- Google fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+	</head>
+	<body>
+
+		<svg class="simon-game" viewBox="0 0 350 350" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" height="350px" version="1.1">
+			<g transform="translate(175, 175)">
+				<circle class="main-circle" cx="0" cy="0" r="150"/>
+
+				<!-- Buttons -->
+				<path id="red-button" class="button" d="M0 -70 0 -140A140 140 0 0 1 140 0L70 0A70 70 0 0 0 0 -70Z"/>
+				<path id="blue-button" class="button" d="M70 0 140 0A140 140 0 0 1 0 140L0 70A70 70 0 0 0 70 0Z"/>
+				<path id="yellow-button" class="button" d="M0 70 0 140A140 140 0 0 1 -140 0L-70 0A70 70 0 0 0 0 70Z"/>
+				<path id="green-button" class="button" d="M-70 0 -140 0A140 140 0 0 1 0 -140L0 -70A70 70 0 0 0 -70 0Z"/>
+				<!-- Images -->
+				<use id="red-image" class="image" xlink:href="img/path/Pegasus_Boots.svg#pegasus-boots" width="32px" x="59" y="-91" />
+				<use id="blue-image" class="image" xlink:href="img/path/Bomb.svg#bomb" width="32px" x="59" y="59" />
+				<use id="yellow-image" class="image" xlink:href="img/path/Small_Key.svg#small-key" width="32px" x="-91" y="59" />
+				<use id="green-image" class="image" xlink:href="img/path/Rupee_Green_2.svg#rupee-green-2" width="32px" x="-91" y="-91" />
+				<!-- Outer border -->
+				<path id="red-border-outer" class="border-outer" d="M0 -138 0 -140A140 140 0 0 1 140 0L138 0A138 138 0 0 0 0 -138Z"/>
+				<path id="blue-border-outer" class="border-outer" d="M138 0 140 0A140 140 0 0 1 0 140L0 138A138 138 0 0 0 138 0Z"/>
+				<path id="yellow-border-outer" class="border-outer" d="M0 138 0 140A140 140 0 0 1 -140 0L-138 0A138 138 0 0 0 0 138Z"/>
+				<path id="green-border-outer" class="border-outer" d="M-138 0 -140 0A140 140 0 0 1 0 -140L0 -138A138 138 0 0 0 -138 0Z"/>
+				<!-- Inner border -->
+				<path id="red-border-inner" class="border-inner" d="M0 -70 0 -73A73 73 0 0 1 73 0L70 0A70 70 0 0 0 0 -70Z"/>
+				<path id="blue-border-inner" class="border-inner" d="M70 0 73 0A73 73 0 0 1 0 73L0 70A70 70 0 0 0 70 0Z"/>
+				<path id="yellow-border-inner" class="border-inner" d="M0 70 0 73A73 73 0 0 1 -73 0L-70 0A70 70 0 0 0 0 70Z"/>
+				<path id="green-border-inner" class="border-inner" d="M-70 0 -73 0A73 73 0 0 1 0 -73L0 -70A70 70 0 0 0 -70 0Z"/>
+
+
+
+				<!-- Buttons delimiters -->
+				<line x1="0" y1="-55" x2="0" y2="-145" style="stroke: #333; stroke-width: 10px;" />
+				<line x1="55" y1="0" x2="145" y2="0" style="stroke: #333; stroke-width: 10px;" />
+				<line x1="0" y1="55" x2="0" y2="145" style="stroke: #333; stroke-width: 10px;" />
+				<line x1="-55" y1="0" x2="-145" y2="0" style="stroke: #333; stroke-width: 10px;" />
+
+				<circle style="fill: #333;" cx="0" cy="0" r="70"/>
+				<circle class="controls-panel" cx="0" cy="0" r="60"/>
+
+
+				<text id="app-logo-top" text-anchor="middle" class="app-logo-small" y="-50" x="4">the legend of</text>
+				<text id="app-logo" text-anchor="middle" class="app-logo" y="-32">Simon</text>
+				<text id="app-logo-bottom" text-anchor="middle" class="app-logo-small" y="-27" x="7">a link to the past</text>
+
+
+				<rect class="display" x="-50" y="-24" rx="2" ry="2" width="100" height="48" />
+
+				<rect id="display-background" class="display-background" x="-48" y="-22" width="96" height="44" />
+				<text text-anchor="middle" id="status-text" y="0">Loading</text>
+				<g id="on-display" filter="url(#brightness-display)">
+					<!-- Images -->
+					<use id="heart-0" xlink:href="img/path/Heart_Container_Small.svg#heart-container" width="12px" x="-30" y="-12" />
+					<use id="heart-1" xlink:href="img/path/Piece_of_Heart_Small.svg#piece-of-heart" width="12px" x="-18" y="-12" />
+					<use id="heart-2" xlink:href="img/path/Heart_Container_Empty_Small.svg#heart-container-empty" width="12px" x="-6" y="-12" />
+					<use id="heart-3" xlink:href="img/path/Heart_Container_Empty_Small.svg#heart-container-empty" width="12px" x="6" y="-12" />
+					<use id="heart-4" xlink:href="img/path/Heart_Container_Empty_Small.svg#heart-container-empty" width="12px" x="18" y="-12" />
+
+					<use id="heart-5" xlink:href="img/path/Heart_Container_Empty_Small.svg#heart-container-empty" width="12px" x="-30" y="0" />
+					<use id="heart-6" xlink:href="img/path/Heart_Container_Empty_Small.svg#heart-container-empty" width="12px" x="-18" y="0" />
+					<use id="heart-7" xlink:href="img/path/Heart_Container_Empty_Small.svg#heart-container-empty" width="12px" x="-6" y="0" />
+					<use id="heart-8" xlink:href="img/path/Heart_Container_Empty_Small.svg#heart-container-empty" width="12px" x="6" y="0" />
+					<use id="heart-9" xlink:href="img/path/Heart_Container_Empty_Small.svg#heart-container-empty" width="12px" x="18" y="0" />
+				</g>
+
+
+				<!-- Power controls section -->
+				<text class="on-off" x="-38" y="34">OFF</text>
+				<rect id="power-slide" class="power-slide" x="-30" y="38" rx="1" ry="1" width="18" height="8" />
+				<rect id="power-slider" class="power-slider" x="-30" y="38" rx="1" ry="1" width="8" height="8" />
+				<text class="on-off" x="-16" y="34">ON</text>
+
+				<!-- Strict mode section -->
+				<circle id="strict-light" class="strict-light" cx="12" cy="32" r="2"/>
+				<circle id="strict-light-blur" class="strict-light-blur" cx="12" cy="32" r="3"/>
+				<text id="strict-text" class="on-off" x="16" y="34">STRICT</text>
+				<circle id="strict-button" class="strict-button" cx="24" cy="42" r="3"/>
+
+				<!-- Buttons outer border limiters -->
+				<path style="fill: #333;" d="M0 -140 0 -150A150 150 0 1 1 -150 0L-140 0A140 140 0 1 0 0 -140 Z"/>
+				<path style="fill: #333;" d="M140 0 150 0A150 150 0 1 1 0 -150L0 -140A140 140 0 1 0 140 0 Z"/>
+
+				<!-- Credits -->
+				<path style="display: none;" id="creditsPath" d="M -148 0 A 148 148 0 0 0 148 0" />
+				<a class="credits-link" href="https://d2718nis.github.io" target="_blank">
+					<text class="credits-text" x="0" y="0" text-anchor="middle">
+						<textPath xlink:href="#creditsPath" startOffset="50%">May 2017 by Denis Z.</textPath>
+					</text>
+				</a>
+
+			</g>
+
+			<filter id="brightness-active">
+				<feComponentTransfer>
+				<feFuncR type="linear" id='brightness1' slope="1.75"/>
+				<feFuncG type="linear" id='brightness2' slope="1.75"/>
+				<feFuncB type="linear" id='brightness3' slope="1.75"/>
+				</feComponentTransfer>
+			</filter>
+			<filter id="brightness-display">
+				<feComponentTransfer>
+				<feFuncR type="linear" id='brightness1' slope="0.5"/>
+				<feFuncG type="linear" id='brightness2' slope="0.5"/>
+				<feFuncB type="linear" id='brightness3' slope="0.5"/>
+				</feComponentTransfer>
+			</filter>
+			<filter id="outer-shadow" height="130%" width="130%">
+				<feGaussianBlur in="SourceAlpha" stdDeviation="6"/>
+				<feOffset dx="0" dy="3" result="offsetblur"/>
+				<feComponentTransfer result="shadow1">
+					<feFuncA type="linear" slope="0.16"></feFuncA>
+				</feComponentTransfer>
+				<feGaussianBlur in="SourceAlpha" stdDeviation="6"/>
+				<feOffset dx="0" dy="3" result="offsetblur"/>
+				<feComponentTransfer result="shadow2">
+					<feFuncA type="linear" slope="0.23"></feFuncA>
+				</feComponentTransfer>
+				<feMerge>
+					<feMergeNode in="shadow1"/>
+					<feMergeNode in="shadow2"/>
+					<feMergeNode in="SourceGraphic"/>
+				</feMerge>
+			</filter>
+		</svg>
+		<audio id="music" loop>
+			<source src="media/sounds/music.mp3" type="audio/mpeg" />
+		</audio>
+		<audio id="switch">
+			<source src="media/sounds/switch.mp3" type="audio/mpeg" />
+		</audio>
+		<audio id="error">
+			<source src="media/sounds/error.mp3" type="audio/mpeg" />
+		</audio>
+		<audio id="victory">
+			<source src="media/sounds/item_get_1.mp3" type="audio/mpeg" />
+		</audio>
+		<audio id="secret">
+			<source src="media/sounds/secret.mp3" type="audio/mpeg" />
+		</audio>
+		<audio id="red-sound">
+			<source src="media/sounds/pegasus_boots_5.mp3" type="audio/mpeg" />
+		</audio>
+		<audio id="blue-sound">
+			<source src="media/sounds/bomb_explode.mp3" type="audio/mpeg" />
+		</audio>
+		<audio id="yellow-sound">
+			<source src="media/sounds/key_2.mp3" type="audio/mpeg" />
+		</audio>
+		<audio id="green-sound">
+			<source src="media/sounds/rupee_wallet.mp3" type="audio/mpeg" />
+		</audio>
+
+		<script src="js/main.js"></script>
+		<div class="background"></div>
+	</body>
+</html>
