@@ -101,7 +101,7 @@ var view = {
 		document.getElementById('music').pause();
 	},
 	powerOn: function() {
-		view.playSound('music', 0.01);
+		view.playSound('music', 0.1);
 		document.getElementById('on-display').style.display = 'block';
 	},
 	turnOnDisplay: function() {
