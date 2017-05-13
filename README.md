@@ -2,7 +2,7 @@ Simon Game
 ==========
 Simon game app for the [freecodecamp](https://www.freecodecamp.com) challenge.
 * Github pages: https://d2718nis.github.io/simon-game
-* Codepen.io: http://codepen.io/d2718nis/full/VbrqeE/
+* Codepen.io: https://codepen.io/d2718nis/full/VbrqeE
 
 ![Simon Game](https://d2718nis.github.io/img/portfolio9.png "Simon Game")
 
@@ -58,7 +58,7 @@ who participated in this project.
 
 Acknowledgments
 ----------
-* [Nintendo](http://www.nintendo.com) &#8212; a Japanese multinational consumer electronics and video game company
+* [Nintendo](https://www.nintendo.com) &#8212; a Japanese multinational consumer electronics and video game company
 * [Wikipedia: The Legend of Zelda: A Link to the Past](https://en.wikipedia.org/wiki/The_Legend_of_Zelda:_A_Link_to_the_Past) &#8212;
   an action-adventure video game developed and published by Nintendo for the Super Nintendo Entertainment
   System video game console
@@ -68,7 +68,7 @@ Acknowledgments
   A Link to the Past sounds
 * [Noproblo.dayjo.org](http://noproblo.dayjo.org/ZeldaSounds) &#8212; more The Legend of Zelda sounds
 * [Youtube.com](https://www.youtube.com/watch?v=vFg9Ncsvxd0) &#8212; A Link to the Past OST
-* [Klydestorm.deviantart.com](http://klydestorm.deviantart.com/art/A-Link-to-the-Past-Icon-Pack-184861577) &#8212;
+* [Klydestorm.deviantart.com](https://klydestorm.deviantart.com/art/A-Link-to-the-Past-Icon-Pack-184861577) &#8212;
   A Link to the Past icon pack
 * [Smelda.com](http://smelda.com) &#8212; a lot of Legend of Zelda icons
 * [Zeldauniverse.net](https://zeldauniverse.net/media/fonts) &#8212; Triforce font
