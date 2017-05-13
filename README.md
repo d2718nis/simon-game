@@ -75,4 +75,3 @@ Acknowledgments
 * [Inkscape](https://inkscape.org/en) &#8212; a professional vector graphics editor
 * [Pixel2svg](http://florian-berger.de/en/software/pixel2svg) &#8212; a tool to convert pixel art to SVG - pixel by pixel
 * [Google fonts](https://fonts.google.com) &#8212; a great collection of free and easy to use fonts
-* [Coolors.co](https://coolors.co) &#8212; the super fast color schemes generator
