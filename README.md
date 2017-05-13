@@ -1,6 +1,6 @@
 Simon Game
 ==========
-Simon game app for the [freecodecamp](https://www.freecodecamp.com/) challenge.
+Simon game app for the [freecodecamp](https://www.freecodecamp.com) challenge.
 * Github pages: https://d2718nis.github.io/simon-game
 * Codepen.io: http://codepen.io/d2718nis/full/VbrqeE/
 
@@ -73,5 +73,6 @@ Acknowledgments
 * [Smelda.com](http://smelda.com) &#8212; a lot of Legend of Zelda icons
 * [Zeldauniverse.net](https://zeldauniverse.net/media/fonts) &#8212; Triforce font
 * [Inkscape](https://inkscape.org/en) &#8212; a professional vector graphics editor
+* [Pixel2svg](http://florian-berger.de/en/software/pixel2svg) &#8212; a tool to convert pixel art to SVG - pixel by pixel
 * [Google fonts](https://fonts.google.com) &#8212; a great collection of free and easy to use fonts
 * [Coolors.co](https://coolors.co) &#8212; the super fast color schemes generator
