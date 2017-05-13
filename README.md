@@ -2,7 +2,7 @@ Simon Game
 ==========
 Simon game app for the [freecodecamp](https://www.freecodecamp.com/) challenge.
 * Github pages: https://d2718nis.github.io/simon-game
-* Codepen.io: http://codepen.io/d2718nis/pen/VbrqeE
+* Codepen.io: http://codepen.io/d2718nis/full/VbrqeE/
 
 ![Simon Game](https://d2718nis.github.io/img/portfolio9.png "Simon Game")
 
